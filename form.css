@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(135deg,pink,blue);
+}
+nav{
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(46, 19, 202);
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.container{
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container form .cv-details{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 12px 0;
+}
+form .cv-details .input-box,.input-img{
+    margin-bottom: 15px;
+    padding-left: 10px ;
+    width: calc(100%/2 - 20px);
+}
+.cv-details .input-box .details,.input-img{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#file{margin-top: 15px;}
+form .cv-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline-color: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 3px ;
+}
+form .cv-details .input-box input:focus{
+    border-color: pink;
+}
+form .btn{
+    height: 45px;
+    margin: 45px 0;
+}
+form .btn input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg ,pink , blue);
+}
+.output{
+    height: 400px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: -80px;
+}
+.style{
+    height: 30px;
+    width: 100%;
+    background-color: black;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+/* footer start */
+footer{
+    height: 200px;
+    width: 100%;
+    margin-top: 100px;
+}
+footer .sign-up{
+    height: 100px;
+    background: rgb(48, 46, 46);
+}
+footer .sign-up h2{
+    color: white;
+    text-align: center;
+    padding-top: 70px;
+   }
+footer .sign-up h2 button{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 8px 10px 8px 10px;
+    border-radius: 20px;
+    border: 2px solid white;
+   } 
+footer .copyright{
+    height: 100px;
+    background: rgb(31, 29, 29);
+}
+footer .copyright p{
+    color: white;
+    text-align: center;
+    padding-top: 70px;
+    font-size: 20px;
+}
+/* footer End */

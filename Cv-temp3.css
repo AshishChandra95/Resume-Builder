@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(221, 172, 235);
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(46, 19, 202);
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+nav button{
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-left: 750px;
+}
+
+.change_temp{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 50px;
+}
+.change_temp p{
+    padding: 10px 14px;
+    background-color: rgb(6, 54, 87);
+    border-radius: 20px;
+    color: whitesmoke;
+}
+.change_temp a{text-decoration: none; }
+
+.container{
+    display: grid;
+    place-items: center;
+}
+.main{
+    height: 1000px;
+    width: 80%;
+}
+.main .profile{
+    height: 145px;
+    width: 100%;
+    background: rgb(15, 13, 13);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main .details{
+    height: 900px;
+    width: 100%;
+    background: grey;
+}
+
+.image{
+    height: 140px;
+    width: 140%;
+    border-radius: 100px;
+    background-position: cover;
+}
+.main .profile .name,.contact{
+    color: #fff;
+}
+.main .details h3{
+    background-color: rgb(53, 51, 51);
+    padding: 10px 20px 10px 50px;
+    color: white;
+}
+
+.main .details p{
+    margin-bottom: 5px;
+    padding: 8px 20px 0px 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* footer start */
+footer{
+    width: 100%;
+    margin-top: 200px;
+}
+footer .sign-up{
+    height: 150px;
+    background: rgb(48, 46, 46);
+}
+footer .sign-up{
+    color: white;
+    text-align: center;
+    padding-top: 38px;
+    height: 100px;
+}
+
+.sign-up h2{
+    background-color: none;
+}
+footer .sign-up h2 button{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 8px 10px 8px 10px;
+    border-radius: 20px;
+    border: 2px solid white;
+   } 
+footer .copyright{
+    height: 100px;
+    background: rgb(31, 29, 29);
+}
+footer .copyright p{
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 20px;
+}
+/* footer End */
+
+@media print{
+    nav{
+        display: none;
+    }
+    .change_temp{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    .main{
+        width: 100%;
+    }
+    body{
+        background-color: white;
+    }
+}

@@ -1,0 +1,585 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{font-family: 'Poppins', sans-serif;}
+
+header .back{
+    width: 100%;
+    height: 90vh;
+    background-image: url('Images/Front.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    position: absolute;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+nav{
+    background-color: rgb(58,179,235);    
+    color: black;
+    height: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav h1 {    
+    width: 40%;
+    display: flex;
+}
+
+nav h1 ion-icon {
+    font-size: 30px;
+    margin-left: -2%;
+    margin-right: 8%;
+    position: relative;
+    top: 5px;    
+    cursor: pointer;
+    display: none;
+}
+
+#back-top {
+    background-color: rgb(75, 194, 237);
+    color: aliceblue; 
+    font-size: 25px;
+    padding: 1%;
+    border: none;
+    border-radius: 50px;
+    position: fixed;
+    top: 85%;
+    left: 90%;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}
+
+#menu {
+    display: none;
+}
+
+#slide-menu.active {    
+    animation: slide-in 0.3s ease-in-out;
+}
+
+#slide-menu:not(.active) {    
+    animation: slide-out 0.3s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX();
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#slide-menu {
+    background-color: rgba(58, 179, 235, 0.767);
+    width: 45%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;    
+}
+#slide-menu .second-ollist {
+    font-size: 27px;
+    margin-top: 50%;
+    margin-left: 20%;
+    text-align: center;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#slide-menu .second-ollist a {
+    color: antiquewhite;
+    line-height: 300%;
+}
+
+#logo{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.ollist{    
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ollist li a{
+    color: aliceblue;
+    font-size: 18px;    
+    font-family: "Lato";        
+    transition: all 0.2s;
+}
+.ollist li a:hover{
+    transform: scale(1.2);
+    border-bottom: 4px solid aliceblue;       
+}
+.content{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.front{    
+    height: 440px;
+    width: 300px;
+    margin: auto;
+    margin-top: 250px;
+    background: url("Images/Resume5.jpg");
+    background-size: cover;
+}
+.start {    
+    width: 300px;
+    height: 350px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;    
+}
+.free {
+    color: rgb(255, 255, 255);
+    margin: 10px 10px 15px 10px;
+    font-family: cursive;
+    text-shadow: 2px 2px black;       
+}
+#start {
+    border: 2px solid rgb(58,179,235);
+    padding: 10px 14px 10px 14px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50px;    
+    padding: 5% 15%;    
+    background: rgb(58, 179, 235);
+    cursor: pointer;
+}
+#start:hover{
+    background: rgb(255, 255, 255);
+    color: rgb(58, 179, 235);
+}
+
+/* section first Start */
+.section1{    
+    margin: 15% auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section1 div{
+    height: 600px;
+    width: 500px;
+    margin-top: 20px;
+}
+.section1 .temp{
+    background: url("Images/Resume1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.section1 .guide{
+    text-align: center;
+    padding-top: 60px;
+}
+.section1 .guide h3{
+    padding-top: 50px;
+}
+/* section first end */
+/* section second start */
+.sample{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    margin: 10% auto;
+    width: 100%;
+}
+.section2 h1{
+    text-align: center;
+    margin-top: 30px;
+}
+.sample img{
+    height: 500px;
+    width: 400px;
+    background-size: cover;
+}
+/* section second end */
+/* footer start */
+footer{
+    height: 300px;
+    width: 100%;
+}
+footer .sign-up{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    background: rgb(48, 46, 46);
+}
+footer .sign-up h2{
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+   }
+footer .sign-up h2{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 8px 10px 8px 10px;
+    border-radius: 20px;
+    border: 2px solid white;
+   } 
+footer .copyright{
+    height: 150px;
+    background: rgb(31, 29, 29);
+}
+footer .copyright p{
+    color: white;
+    text-align: center;
+    padding-top: 70px;
+    font-size: 20px;
+}
+.con h5,h3{
+    color: white;
+}
+/* footer End */
+
+
+/* utility classes */
+
+.border2px {
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+/* Popup div */
+
+#login-div {
+    background-color: rgba(46, 43, 44, 0.582);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+
+#login-popup {
+    background-color: aliceblue;
+    width: 45%;
+    height: 60vh;        
+    margin: auto;    
+    overflow: hidden;    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);      
+}
+
+#lg-cross {
+    background-color: rgb(54, 54, 54);
+    color: aliceblue;
+    font-size: 35px;
+    padding: 0.5%;    
+    cursor: pointer;
+    position: relative;
+    left: 94.5%;    
+}
+
+#login-popup h3 {
+    font-size: 25px;
+    text-align: center;    
+}
+
+#login-popup label {
+    font-size: 22px;
+}
+
+#login-popup form {        
+    width: 70%;    
+    margin-left: 20%;
+    padding: 3% 0 0 0;
+}
+
+#login-popup input {
+    width: 80%;
+    height: 8%;
+    margin: 3%;
+    text-align: center;
+    font-size: 18px;
+    padding: 2%;        
+    outline: none;
+}
+
+#login-popup form div {    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#login-popup .lg-frm-btn {
+    background-color: rgb(92, 90, 90);
+    color: aliceblue;
+    width: 27%;
+    font-size: 18px;
+    font-weight: bold;    
+    margin: 5%;
+    padding: 2%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#second-popup-div {    
+    text-align: center;    
+    line-height: 30px;
+}
+
+
+@media screen and (width <= 1250px) {
+
+    .sample img{
+        height: 400px;
+        width: 300px;        
+    }
+
+    .ollist{
+        width: 35%;
+    }
+
+    #section1 div {
+        width: 400px;
+        height: 500px;
+    }
+
+    #login-popup {
+        width: 65%;
+    }
+    
+    
+}
+
+@media screen and (width <= 950px) {
+
+    nav h1 {        
+        margin-left: 1%;
+    }
+
+    #back-top {        
+        font-size: 30px;
+        padding: 2%;        
+        left: 85%;
+    }
+
+    .free {
+        color: rgb(0, 0, 0);
+    }
+    
+
+    header .back {
+        height: 130vh;
+    }
+
+    .sample img{
+        height: 300px;
+        width: 200px;        
+    }
+
+    .ollist{
+        width: 45%;
+        margin-left: -25%;
+    }    
+
+    .content{        
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 15%;
+    }
+    
+    .section1{        
+        flex-direction: column;
+        justify-content: center;
+        margin: 10% auto;        
+    }
+
+    #login-popup {
+        width: 85%;
+    }
+    
+}
+
+@media screen and (width <= 650px) {
+
+    #slide-menu {
+        width: 55%;
+    }
+
+    #back-top {        
+        left: 80%;
+    }
+
+    #slide-menu .second-ollist {
+        margin-top: 45%;        
+    }
+
+    .sample {
+        flex-direction: column;
+    }
+
+    .sample img{
+        height: 300px;
+        width: 200px; 
+        margin: 5% auto;       
+    }
+
+    #menu {
+        display: block;
+    }
+    
+    .ollist{
+        display: none;
+    }
+
+    #section1 {
+        margin: 35% auto;
+    }
+
+    #login-popup {
+        width: 65%;
+    }
+
+    #lg-cross {
+        left: 90%;
+    }
+
+    #login-popup form {
+        margin-left: 10%;
+    }
+
+    #login-popup input {
+        width: 100%;
+    }
+
+    #login-popup form div {
+        margin-top: 5%;
+        margin-left: 20%;
+    }
+
+    #login-popup .lg-frm-btn {
+        font-size: 15px;   
+        width: 40%;
+        padding: 10px;     
+    }
+}
+
+@media screen and (width <= 450px) {
+
+    nav {
+        font-size: 15px;
+    }    
+
+    #slide-menu {
+        width: 65%;
+    }
+
+    #slide-menu .second-ollist {
+        margin-top: 50%;        
+    }
+
+
+    #logo {
+        font-size: 20px;
+    }
+
+    .front{    
+        width: 250px;
+        height: 400px;
+    }
+
+    #section1 {
+        margin: 50% auto;
+        font-size: 12px;        
+    }
+
+    #section1 .temp {        
+        width: 320px;
+        height: 400px;
+    }
+
+    .sample {
+        flex-direction: column;
+    }
+
+    .sample img{
+        height: 300px;
+        width: 200px; 
+        margin: 5% auto;       
+    }
+    
+    .ollist{
+        display: none;
+    }
+
+
+    #login-popup {
+        width: 85%;        
+    }
+
+    #lg-cross {
+        left: 87%;
+    }
+
+    #login-popup form {
+        margin-top: 5%;
+        margin-left: 10%;
+    }
+
+    #login-popup form label {
+        font-size: 18px;
+    }
+
+    #login-popup input {
+        width: 100%;
+    }
+
+    #login-popup form div {
+        margin-top: 15%;
+        margin-left: 20%;
+    }
+
+    #login-popup .lg-frm-btn {
+        font-size: 15px;   
+        width: 50%;
+        padding: 10px;     
+    }
+}
+

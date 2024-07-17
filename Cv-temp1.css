@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: rgb(233, 153, 166);
+}
+nav{
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(46, 19, 202);
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: black;
+
+}
+nav button{
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-left: 750px;
+    cursor: pointer;
+}
+
+.change_temp{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 50px;
+}
+.change_temp p{
+    padding: 10px 14px;
+    background-color: rgb(6, 54, 87);
+    border-radius: 20px;
+    color: whitesmoke;
+}
+.change_temp a{text-decoration: none;}
+
+
+
+.container{
+    display: grid;
+    place-items: center;
+}
+
+.main p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main{
+    height: 1000px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .details{
+    height:900px;
+    width: 30%;
+    background-color: rgb(4, 58, 71);
+}
+.main .about{
+    height: 900px;
+    width: 60%;
+    background-color: #cfcccc;
+}
+.image{
+    height: 200px;
+    width: 200px;
+    margin: 10px 20px;
+    border-radius: 100px;
+    background-position: cover;
+}
+.main .details h2,h4,p{
+    color: white;
+    text-align: start;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.main .details h4{margin-bottom: 20px;margin-top: 20px;}
+hr{
+    margin-top: 20px;
+}
+.main .details #About{
+    margin-top: 50px;
+}
+.about h3{
+    width: 50%;
+    background-color: rgb(118, 162, 192);
+    padding: 10px 10px 10px 10px;
+}
+.about h3,.about p{
+    color: black;
+    margin: 20px 20px 0px 30px;
+}
+
+/* footer start */
+footer{
+    width: 100%;
+}
+footer .sign-up{
+    background: rgb(48, 46, 46);
+}
+footer .sign-up{
+    color: white;
+    text-align: center;
+    padding-top: 38px;
+    height: 100px;
+}
+
+.sign-up h2{
+    background-color: none;
+}
+footer .sign-up h2 button{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 8px 10px 8px 10px;
+    border-radius: 20px;
+    border: 2px solid white;
+   } 
+footer .copyright{
+    height: 100px;
+    background: rgb(31, 29, 29);
+    margin-top: -10px;
+}
+footer .copyright p{
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 20px;
+}
+/* footer End */
+
+@media print{
+    nav{
+        display: none;
+    }
+    section{
+        display: none;
+    }
+    .change_temp{        
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    div .main{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .container{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: white;
+    }
+    #para1{
+        padding-bottom: 50px;
+    }
+}

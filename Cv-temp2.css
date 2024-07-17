@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(117, 163, 196);
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(46, 19, 202);
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+nav button{
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-left: 750px;
+}
+
+.change_temp{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 50px;
+}
+.change_temp p{
+    padding: 10px 14px;
+    background-color: rgb(6, 54, 87);
+    border-radius: 20px;
+    color: whitesmoke;
+}
+.change_temp a{text-decoration: none;}
+
+.container{
+    display: grid;
+    place-items: center;
+}
+
+.main p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main{
+    height: 1000px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.main .details{
+    height: 1000px;
+    width: 30%;
+    background-color: rgb(5, 5, 5);
+}
+.main .about{
+    height: 1000px;
+    width: 60%;
+    background-color: #d4d0d0;
+}
+
+.image{
+    height: 150px;
+    width: 150px;
+    margin: 30px 0px 0px 40px;
+    background-position: cover;
+}
+.main .details h2,h4,p{
+    color: white;
+    text-align: start;
+    margin-left: 40px;
+}
+.about h1,h2{
+    background-color: yellow;
+    padding: 10px 10px 10px 50px;
+    color:rgb(48, 39, 39);
+}
+.main .details h4{margin-bottom: 20px;margin-top: 20px;}
+hr{
+    margin-top: 20px;
+}
+.main .About{
+    margin-top: 50px;
+}
+.about h3{
+    width: 50%;
+    background-color: rgb(118, 162, 192);
+    padding: 10px 10px 10px 10px;
+}
+.about h3, .about p {
+    color: black;
+    margin: 12px 20px 0px 30px;
+}
+
+footer{
+    width: 100%;
+}
+
+footer .sign-up{
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: rgb(48, 46, 46);
+    margin-top: 50px;
+   }
+
+
+footer .sign-up h3 button{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 8px 10px 8px 10px;
+    border-radius: 20px;
+    border: 2px solid white;
+   } 
+footer .copyright{
+    height: 100px;
+    background: rgb(31, 29, 29);
+}
+footer .copyright p{
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+
+@media print{
+
+    nav{
+        display: none;
+    }
+    .change_temp{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    .main{
+        width: 100%;
+    }
+    body{
+        background-color: white;
+    }
+}

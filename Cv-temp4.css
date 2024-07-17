@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(26, 144, 187);
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(46, 19, 202);
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+nav button{
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-left: 750px;
+}
+
+.change_temp{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 50px;
+}
+.change_temp p{
+    padding: 10px 14px;
+    background-color: rgb(6, 54, 87);
+    border-radius: 20px;
+    color: whitesmoke;
+}
+.change_temp a{text-decoration: none; }
+
+.container{
+    display: grid;
+    place-items: center;
+}
+
+.main{
+    height: 1000px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 215, 215);
+}
+.about{
+    height: 1000px;
+    width: 70%;
+}
+.details{
+    background-color: rgb(48, 47, 47);
+    height: 950px;
+    width: 30%;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+.image{
+    height: 150px;
+    width: 150px;
+    border-radius: 50px;
+}
+.photo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    width: 80%;
+    margin: 10px 0 10px 60px;
+}
+.name h2{
+    font-size: 40px;
+    font-family: cursive;
+}
+.name h4{
+    font-size: 25px;
+    font-family: math;
+}
+.about h3{
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(137, 137, 131);
+    padding: 5px 0px 5px 40px;
+}
+.about p{
+    font-size: 18px;
+    color: black;
+    margin: 15px 0 10px 80px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.details h4 {
+    font-size: 30px;
+    font-family: math;
+    color: white;
+    margin: 60px 0 15px 30px;
+}
+.details p {
+    font-size: 18px;
+    font-family: math;
+    font-weight: bold;
+    margin-left: 40px;
+    color: white;
+    padding-top: 10px;
+}
+.details #h-line{
+    margin-top: 40px;
+}
+
+/* footer start */
+footer{
+    width: 100%;
+    margin-top: 200px;
+}
+footer .sign-up{
+    height: 150px;
+    background: rgb(48, 46, 46);
+}
+footer .sign-up{
+    color: white;
+    text-align: center;
+    padding-top: 38px;
+    height: 100px;
+}
+
+.sign-up h2{
+    background-color: none;
+}
+footer .sign-up h2 button{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 8px 10px 8px 10px;
+    border-radius: 20px;
+    border: 2px solid white;
+   } 
+footer .copyright{
+    height: 100px;
+    background: rgb(31, 29, 29);
+}
+footer .copyright p{
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 20px;
+}
+/* footer End */
+
+@media print{
+    nav{
+        display: none;
+    }
+    .change_temp{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    body{
+        background-color: white;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .main{
+        width: 100%;
+        height: 100%;
+    }
+    .details p {
+        margin-left: 15px;
+    }
+    .details h4 {
+        margin-left: 10px;
+    }
+    .about h3{
+        font-size: 25px;
+        padding: 4px 0px 4px 40px;
+    }
+
+}

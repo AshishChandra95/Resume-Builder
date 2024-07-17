@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Form2.css">
+</head>
+<body>
+    <nav>
+        <h1 id="logo">CV Build</h1>
+        <a href="LoginSignup/Login.html">Log-in</a>
+    </nav>
+    <div class="main">
+    <div class="container">
+        <div class="title" style="text-align:center;"><b>Qualification & Skills Details</b></div>
+        <form action="form2_action.php" method="post">
+            <div class="cv-details">
+                <div class="input-box">
+                    <input type="text" id="high-school" name="high-school" placeholder="Enter Qualification" oninput="getValue()">
+                </div>
+                
+                <div class="input-box">
+                <input type="text" id="skill" name="skill" placeholder="Enter Skills" oninput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="inter-mediate" name="inter-mediate" placeholder="Enter Qualification" oninput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="skill1" name="skill1" placeholder="Enter Skills" oninput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="graduation" name="graduation" placeholder="Enter Qualification" oninput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="skill2" name="skill2" placeholder="Enter Skills" oninput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="post-graduation" name="post-graduation" placeholder="Enter Qualification" oninput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="skill3" name="skill3" placeholder="Enter Skills" oninput="getValue()">
+            </div>
+
+            </div>
+            <div class="btn">
+				<input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+<div class="output">
+    <div class="style"></div>
+    <h3>Education Details</h3>
+    <ul>
+        <h4><li id="first">High-School</li></h4>
+        <h4><li id="second">Inter-Mediate</li></h4>
+        <h4><li id="third">Graduation</li></h4>
+        <h4><li id="fourth">Post-Graduation</li></h4>
+    </ul>
+    <h3>Skills</h3>
+    <ul>
+        <h4><li id="one">Skill</li></h4>
+        <h4><li id="two">Skill-1</li></h4>
+        <h4><li id="three">Skill-2</li></h4>
+        <h4><li id="four">Skill-3</li></h4>
+    </ul>
+    </div>
+</div>
+<script>
+    function getValue(){
+        let high_school = document.getElementById("high-school").value;
+        let inter = document.getElementById('inter-mediate').value;
+        let graduation = document.getElementById('graduation').value;
+        let post = document.getElementById('post-graduation').value;
+
+        let skill = document.getElementById('skill').value;
+        let skill1 = document.getElementById('skill1').value;
+        let skill2 = document.getElementById('skill2').value;
+        let skill3 = document.getElementById('skill3').value;
+        
+
+        let first = document.getElementById('first');
+        let second = document.getElementById('second');
+        let third = document.getElementById('third');
+        let fourth = document.getElementById('fourth');
+        let fifth = document.getElementById('fifth');
+
+        let one = document.getElementById('one');
+        let two = document.getElementById('two');
+        let three = document.getElementById('three');
+        let four = document.getElementById('four');
+        let five = document.getElementById('five');
+
+        
+        first.innerText = high_school;
+        second.innerText = inter;
+        third.innerText = graduation;
+        fourth.innerHTML = post;
+        fifth.innerText = other;
+
+        one.innerText = skill;
+        two.innerText = skill1;
+        three.innerText = skill2;
+        four.innerText = skill3;
+        five.innerText = skill4;
+
+    }
+</script>
+</body>
+</html>

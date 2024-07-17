@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <nav>
+        <h1 id="logo">CV Build</h1>
+        <a href="LoginSignup/Login.html">Log-in</a>
+    </nav>
+    <div class="main">
+    <div class="container">
+        <div class="title">Personal Details</div>
+        <form action="personal.php" onsubmit="return validation()" method="post">
+            <div class="cv-details">
+            
+                <div class="input-box">
+                    <span class="details">Father Name</span>
+                    <input type="text" name="fname" id="fname" placeholder="Enter Your Father Name" onInput="getValue()">
+                </div>
+
+            <div class="input-box">
+                <span class="details">Date of Birth</span>
+                <input type="date" name="dob" id="dob" placeholder="Enter Your DOB" onInput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <span class="details">Marital Status</span>
+                <input type="text" name="mstatus" id="status" placeholder="Enter Your Status" onInput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <span class="details">Language Known</span>
+                <input type="text" name="lknown" id="known" placeholder="Enter Your Language" oninput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <span class="details">Gender</span>
+                <input type="text" name="gender" id="gender" placeholder="Enter Your Gender" oninput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <span class="details">Nationality</span>
+                <input type="text" name="nation" id="nation" placeholder="Enter Your Nationality" oninput="getValue()">
+            </div>
+            </div>
+            <div class="btn">
+            <input type="submit" value="Next"></a>
+            </div>
+        </form>
+    </div>
+    <div class="output">
+        <div class="style"></div>
+        <h3 style="margin: 10px 10px 8px 10px;" id="result">Father Name</h3><hr>
+        <h3 style="margin: 10px 10px 8px 10px;" id="result1">Date of Birth</h3><hr>
+        <h3 style="margin: 10px 10px 8px 10px;" id="result2">Marital Status</h3><hr>
+        <h3 style="margin: 10px 10px 8px 10px;" id="result3"> Language Known </h3><hr>
+        <h3 style="margin: 10px 10px 8px 10px;" id="result4">Gender</h3><hr>
+        <h3 style="margin: 10px 10px 8px 10px;" id="result5">Nationality</h3><hr>
+    </div>
+</div>
+    <!-- Footer Start -->
+    <footer id="footer">
+        <div class="sign-up">
+            <h2>Registration for free <button>Sign-up</button></h2>
+        </div>
+        <div class="copyright"><p>@2023 Copyright : CV Build.com</p></div>
+    </footer>
+    <!-- footer end -->
+
+    <script>
+        function validation(){
+            var fname = document.getElementById('fname').value;
+            var dob = document.getElementById('dob').value;
+            var status = document.getElementById('status').value;
+            var known = document.getElementById('known').value;
+            var gender = document.getElementById('gender').value;
+            var nation = document.getElementById('nation').value;
+            if(fname.length=="" && dob.length=="" && status.length=="" && known.length=="" && gender.length=="" && nation.length == ""){
+                alert("Some Feild is Empty");
+                return false;
+            }
+            else{
+                if(!validateFname()){
+                    return false;
+                }
+                if(dob.length==""){
+                    alert("Fill Your Date of Birth");
+                    return false;
+                }
+                if(status.length==""){
+                    alert("Enter Your Marital Status");
+                    return false;
+                }
+                if(known.length==""){
+                    alert("Enter Language");
+                    return false;
+                }
+                if(gender.length==""){
+                    alert("Fill Your Gender");
+                    return false;
+                }
+                if(nation.length==""){
+                    alert("Fill Nationality");
+                    return false;
+                }
+            }
+
+        }
+
+        function validateFname() {
+        var fname = document.getElementById('fname').value.trim();
+        var fnameRegex = /^[a-zA-Z\s]*$/; // Regex to allow only alphabetic characters and spaces
+        
+        if (fname === "") {
+            alert("Please enter your Father Name.");
+            return false;
+        }
+        
+        if (!fnameRegex.test(nafnameme)) {
+            alert("Please enter a valid name (only alphabetic characters and spaces).");
+            return false;
+        }
+        
+        return true;
+    }
+  
+    function getValue() {
+        let fname = document.getElementById('fname').value;
+        let dob = document.getElementById('dob').value;
+        let status = document.getElementById('status').value;
+        let known = document.getElementById('known').value;
+        let gender = document.getElementById('gender').value;
+        let nation = document.getElementById('nation').value;
+
+        let result = document.getElementById("result");
+        let result1 = document.getElementById("result1");
+        let result2 = document.getElementById("result2");
+        let result3 = document.getElementById("result3");
+        let result4 = document.getElementById("result4");
+        let result5 = document.getElementById("result5");
+ 
+        result.innerText = fname;
+        result1.innerText = dob;
+        result2.innerText = status; 
+        result3.innerText = known;
+        result4.innerText = gender;
+        result5.innerHTML = nation;
+    }
+    function validatefName() {
+        var fname = document.getElementById('fname').value.trim();
+        var fnameRegex = /^[a-zA-Z\s]*$/; // Regex to allow only alphabetic characters and spaces
+        
+        if (fname === "") {
+            alert("Please enter your name.");
+            return false;
+        }
+        
+        if (!fnameRegex.test(name)) {
+            alert("Please enter a valid name (only alphabetic characters and spaces).");
+            return false;
+        }
+        
+        return true;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <nav>
+        <h1 id="logo">CV Build</h1>
+        <a href="LoginSignup/Login.html">Log-in</a>
+    </nav>
+    <div class="main">
+    <div class="container">
+        <div class="title">Personal Details</div>
+        <form action="form_action.php" onsubmit="return validation()" method="post"  enctype="multipart/form-data">
+            <div class="cv-details">
+                <div class="input-img">
+                    <span class="details">Upload Image</span>
+                    <input type="file" name="image" id="input-file">
+                </div>
+
+                <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" name="Rname" id="name" placeholder="Enter Your Name" onInput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <span class="details">Job Title</span>
+                <input type="text" name="Rjob" id="job" placeholder="Enter Your job Title" onInput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <span class="details">Phone</span>
+                <input type="text" name="Rphone" id="phone" placeholder="Enter Your Contact" oninput="getValue()" maxlength="10" size="10">
+            </div>
+
+            <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" name="Rmail" id="mail" placeholder="Enter Your email" oninput="getValue()">
+            </div>
+
+            <div class="input-box">
+                <span class="details">Address</span>
+                <input type="text" name="Radd" id="add" placeholder="Enter Your address" oninput="getValue()">
+            </div>
+            </div>
+            <div class="btn">
+            <input type="submit" value="Next" name="submit"></a>
+            </div>
+        </form>
+    </div>
+    <div class="output">
+        <div class="style"></div>
+        <img id="preview" style="height: 120px; width: 100px; margin: 10px 0px 10px 95px;">
+        <h2 style="margin: 10px 10px 8px 10px;" id="result">Your Name</h3><hr>
+        <h3 style="margin: 10px 10px 8px 10px;" id="result1">Job-Title</h3><hr>
+        <h3 style="margin: 10px 10px 8px 10px;" id="result2"> Contact </h3><hr>
+        <h3 style="margin: 10px 10px 8px 10px;" id="result3">E-mail</h3><hr>
+        <h3 style="margin: 10px 10px 8px 10px;" id="result4">Address</h3>
+    </div>
+</div>
+    <!-- Footer Start -->
+    <footer id="footer">
+        <div class="sign-up">
+            <h2>Registration for free <button>Sign-up</button></h2>
+        </div>
+        <div class="copyright"><p>@2023 Copyright : CV Build.com</p></div>
+    </footer>
+    <!-- footer end -->
+
+    <script>
+        function validation(){
+            var img = document.getElementById('input-file').value;
+            var nm = document.getElementById('name').value;
+            var jb = document.getElementById('job').value;
+            var ph = document.getElementById('phone').value;
+            var mail = document.getElementById('mail').value;
+            var add = document.getElementById('add').value;
+
+            if(nm.length=="" && jb.length=="" && ph.length=="" && mail.length=="" && add.length==""){
+                alert("Some Feild is Empty");
+                return false;
+            }
+            else{
+                if (!validateName()) {
+                    return false;
+                    }
+        
+                if (!validateMobileNumber()) {
+                    return false;
+                    }
+        
+                if (!validateEmail()) {
+                    return false;
+                    }
+
+                if(!validateJob()){
+                    return false;
+                }
+                if(add.length==""){
+                    alert("Fill Address");
+                    return false;
+                }
+            }
+
+        }
+        var imageInput =document.getElementById("input-file");
+        var previewImage = document.getElementById("preview");
+        imageInput.addEventListener("change",function(event){
+            if(event.target.files.length == 0){
+                return;
+            }
+            var tempUrl = URL.createObjectURL(event.target.files[0]);
+            previewImage.setAttribute("src",tempUrl);
+        });
+    
+    function getValue() {
+        let name = document.getElementById("name").value;
+        let job = document.getElementById("job").value;
+        let phone = document.getElementById("phone").value;
+        let mail = document.getElementById("mail").value;
+        let add = document.getElementById("add").value;
+
+        let result = document.getElementById("result");
+        let result1 = document.getElementById("result1");
+        let result2 = document.getElementById("result2");
+        let result3 = document.getElementById("result3");
+        let result4 = document.getElementById("result4");
+ 
+        result.innerText = name;
+        result1.innerText = job;
+        result2.innerText = phone; 
+        result3.innerText = mail;
+        result4.innerText = add;
+    }
+
+    function validateName() {
+        var name = document.getElementById('name').value.trim();
+        var nameRegex = /^[a-zA-Z\s]*$/; // Regex to allow only alphabetic characters and spaces
+        
+        if (name === "") {
+            alert("Please enter your name.");
+            return false;
+        }
+        
+        if (!nameRegex.test(name)) {
+            alert("Please enter a valid name (only alphabetic characters and spaces).");
+            return false;
+        }
+        
+        return true;
+    }
+
+    function validateJob() {
+        var job = document.getElementById('job').value.trim();
+        var jobRegex = /^[a-zA-Z\s]*$/; // Regex to allow only alphabetic characters and spaces
+        
+        if (job === "") {
+            alert("Please enter your job title.");
+            return false;
+        }
+        
+        if (!jobRegex.test(job)) {
+            alert("Please enter a valid name (only alphabetic characters and spaces).");
+            return false;
+        }
+        
+        return true;
+    }
+    function validateMobileNumber() {
+        var phone = document.getElementById('phone').value.trim();
+        var phoneRegex = /^[0-9]{10}$/; // Regex to allow exactly 10 numeric digits
+        
+        if (phone === "") {
+            alert("Please enter your mobile number.");
+            return false;
+        }
+        
+        if (!phoneRegex.test(phone)) {
+            alert("Please enter a valid 10-digit mobile number.");
+            return false;
+        }
+        
+        return true;
+    }
+
+    function validateEmail() {
+        var email = document.getElementById('mail').value.trim();
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email format regex
+        
+        if (email === "") {
+            alert("Please enter your email address.");
+            return false;
+        }
+        
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+        
+        return true;
+    }
+    </script>
+</body>
+</html>
